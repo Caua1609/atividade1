@@ -23,3 +23,20 @@ fun main() {
 }
 
 ```
+
+### Atividade 2
+#### 2.A
+```kotlin
+fun main() {
+    print("Digite o comprimento de um dos lados do terreno (m): ")
+    val lado1 = readln().toFloat()
+
+    print("Digite o segundo valor (m): ")
+    val lado2 = readln().toFloat()
+
+    val area = lado1 * lado2
+
+    print("A área do terreno é de: $area m²")
+}
+
+```
