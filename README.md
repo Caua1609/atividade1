@@ -104,5 +104,31 @@ fun main() {
 
 #### 2.D
 ```kotlin
+fun main() {
+    print("Quantidade de mestres na obra: ")
+    val mestre = readLine()!!.toInt()
+
+    print("Quantidade de serventes na obra: ")
+    val serventes = readLine()!!.toInt()
+
+    print("Quantidade de engenheiros na obra: ")
+    val engenheiros = readLine()!!.toInt()
+
+    val valorMestre = 3500.0
+    val valorServente = 1900.0
+    val valorEngenheiro = 11000.0
+
+    val totalMestre = mestre * valorMestre
+    val totalServente = serventes * valorServente
+    val totalEngenheiro = engenheiros * valorEngenheiro
+
+    val valorTotal = totalMestre + totalServente + totalEngenheiro
+
+    println("O valor total da mão de obra é de R$ $valorTotal,00")
+}
+```
+
+#### 2.E
+```kotlin
 
 ```
