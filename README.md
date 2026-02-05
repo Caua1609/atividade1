@@ -38,5 +38,26 @@ fun main() {
 
     print("A área do terreno é de: $area m²")
 }
+```
+
+#### 2.B
+```kotlin
+fun main() {
+    print("Digite a área da obra em m²: ")
+    val area = readln().toDouble()
+
+    if (area < 10) {
+        println("A obra deve ter no mínimo 10 m² para contratação.")
+    } else {
+        val mestres = 1
+        val serventes = (area / 10).toInt() * 2
+        val engenheiros = (area / 100).toInt()
+
+        println("Quantidade de profissionais necessários:")
+        println("Mestre de obra: $mestres")
+        println("Serventes: $serventes")
+        println("Engenheiros: $engenheiros")
+    }
+}
 
 ```
