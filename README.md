@@ -130,5 +130,75 @@ fun main() {
 
 #### 2.E
 ```kotlin
+fun main() {
+
+print("Área da obra (m²): ")
+val area = readLine()!!.toDouble()
+
+print("Quartos sem suíte: ")
+val quartosSemSuite = readLine()!!.toInt()
+
+print("Quartos com suíte: ")
+val quartosComSuite = readLine()!!.toInt()
+
+print("Banheiros: ")
+val banheiros = readLine()!!.toInt()
+
+print("areaServiço: ")
+val areaServico = readLine()!!.toInt()
+
+print("piscinas: ")
+val piscina = readLine()!!.toInt()
+
+val blocos10m2 = area / 10
+val subtotalArea = blocos10m2 * 4500
+val subtotalQuartosSemSuite = quartosSemSuite * 12000
+val subtotalQuartosComSuite = quartosComSuite * 17000
+val subtotalBanheiros = banheiros * 5000
+val subtotalAreaServico = areaServico * 15000
+val subtotalPiscina = piscina * 27550
+
+val totalSemMaoDeObra = subtotalArea +
+subtotalQuartosSemSuite +
+subtotalQuartosComSuite +
+subtotalBanheiros +
+subtotalAreaServico +
+subtotalPiscina
+
+print("\nQuantidade de mestres de obra: ")
+val mestres = readLine()!!.toInt()
+
+print("Quantidade de serventes: ")
+val serventes = readLine()!!.toInt()
+
+print("Quantidade de engenheiros: ")
+val engenheiros = readLine()!!.toInt()
+
+val custoMaoDeObra =
+(mestres * 3500) +
+(serventes * 1900) +
+(engenheiros * 11000)
+
+val totalComMaoDeObra = totalSemMaoDeObra + custoMaoDeObra
+val lucroEmpresa = totalComMaoDeObra * 0.25
+val valorFinalCliente = totalComMaoDeObra + lucroEmpresa
+val custoFinalObra = totalComMaoDeObra - custoMaoDeObra
+
+println("\n========== RELATÓRIO DA OBRA ==========")
+println("Subtotal por área: R$ $subtotalArea")
+println("Quartos sem suíte: R$ $subtotalQuartosSemSuite")
+println("Quartos com suíte: R$ $subtotalQuartosComSuite")
+println("Banheiros: R$ $subtotalBanheiros")
+println("Área de serviço: R$ $subtotalAreaServico")
+println("Piscina: R$ $subtotalPiscina")
+
+println("\nTotal da obra (sem mão de obra): R$ $totalSemMaoDeObra")
+println("Total da mão de obra: R$ $custoMaoDeObra")
+println("Total da obra (com mão de obra): R$ $totalComMaoDeObra")
+
+println("\nLucro da empresa (25%): R$ $lucroEmpresa")
+println("Valor final a receber: R$ $valorFinalCliente")
+println("Custo da obra (descontando folha): R$ $custoFinalObra")
+}
 
 ```
