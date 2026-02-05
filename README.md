@@ -61,3 +61,48 @@ fun main() {
 }
 
 ```
+
+#### 2.C
+```kotlin
+fun main() {
+    print("Informe a área da obra em m²: ")
+    val area = readLine()!!.toDouble()
+
+    print("Quantidade de quartos sem suíte: ")
+    val quartoSemSuite = readLine()!!.toInt()
+
+    print("Quantidade de quartos com suíte: ")
+    val quartoComSuite = readLine()!!.toInt()
+
+    print("Quantidade de banheiros: ")
+    val banheiros = readLine()!!.toInt()
+
+    print("Quantidade de áreas de serviço: ")
+    val areaServico = readLine()!!.toInt()
+
+    print("Quantidade de piscinas: ")
+    val piscina = readLine()!!.toInt()
+
+    val valorPorArea = (area / 10) * 4500
+    val valorQuartoSemSuite = quartoSemSuite * 12000
+    val valorQuartoComSuite = quartoComSuite * 17000
+    val valorBanheiro = banheiros * 5000
+    val valorAreaServico = areaServico * 15000
+    val valorPiscina = piscina * 27550
+
+    val valorTotal = valorPorArea +
+            valorQuartoSemSuite +
+            valorQuartoComSuite +
+            valorBanheiro +
+            valorAreaServico +
+            valorPiscina
+
+    println("O valor total da obra é de R$ $valorTotal,00")
+}
+
+```
+
+#### 2.D
+```kotlin
+
+```
